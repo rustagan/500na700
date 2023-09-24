@@ -1,0 +1,126 @@
+.news {
+        position: absolute;
+        color: $fontColor;
+        background-color: $backgrColor;
+        top: 1570px;
+        padding-bottom: 110px;
+        width: 100%;
+        .news_container {
+            max-width: 1260px;
+            margin-left: auto;
+            margin-right: auto; 
+        }
+        .news_header {
+            max-height: 85px;
+            font-size: 80px;
+            font-weight: 500;
+        }
+        .news_content {
+            display: flex;
+            flex-wrap: wrap;
+            .news_content_card {
+                flex-wrap: wrap;
+                max-width: 400px;
+                margin-right: 20px;
+                margin-top: 30px;
+                margin-bottom: 20px;
+                font-size: 14px;
+                .card_info {
+                    display: flex;
+                    flex-direction: column;
+                    .card_info_header {
+                        margin-top: 30px;
+                    }
+                    .card_info_text {
+                        padding-top: 10px;
+                    }
+                }
+            }
+            .card_info_text {
+                padding-top: 10px;
+            }
+        }
+
+    }
+
+@media (max-width: 450px) {
+    .news {
+        position: static;
+        padding-left: 15px;
+        padding-right: 0;
+        width: 100%;
+        padding-bottom: 80px;
+        .slick-list {
+            overflow: hidden;
+        }
+        .news_header {
+            font-size: 40px;
+            margin: 12px 0;
+        }
+        .news_content {
+            flex-wrap: nowrap;
+            .news_content_card {
+                margin-top: 20px;
+                width: 200px;
+                img {
+                    object-fit: cover;
+                    width: 200px;
+                    height: 264px;
+                }
+                .card_info {
+                    
+                    .card_info_header {
+                        font-size: 16px;
+                    }
+                    .card_info_text {
+                        font-size: 14px;
+                        padding-right: 11px;
+                        width: 200px;
+                    }
+                }
+            }
+        }
+        .slick-track{
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .slick-list {
+            overflow: hidden;
+        }
+    }
+}
+
+// /* Слайдер */
+// .slick-slider{}
+// /* Слайдер запущен */
+// .slick-slider.slick-initialized{}
+// /* Слайдер с точками */
+// .slick-slider.slick-dotted{}
+// /* Ограничивающая оболочка */
+// .slick-list {}
+
+// /* Слайд */
+// .slick-slide{}
+// /* Слайд активный (показывается) */
+// .slick-slide.slick-active{}
+// /* Слайд основной */
+// .slick-slide.slick-current{}
+// /* Слайд по центру */
+// .slick-slide.slick-center{}
+// /* Клонированный слайд */
+// .slick-slide.slick-cloned{}
+// /* Стрелка */
+// .slick-arrow{
+    
+// }
+// /* Стрелка не активная */
+// .slick-arrow.slick-disabled{}
+// /* Точки (булиты) */
+// .slick-dots{}
+// .slick-dots li{}
+// /* Активная точка */
+// .slick-dots li.slick-active{}
+// /* Элемент точки */
+// .slick-dots li button{}
+// /* Лента слайдов */

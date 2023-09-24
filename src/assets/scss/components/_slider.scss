@@ -1,0 +1,168 @@
+// /* Слайдер */
+// .slick-slider{}
+// /* Слайдер запущен */
+// .slick-slider.slick-initialized{}
+// /* Слайдер с точками */
+// .slick-slider.slick-dotted{}
+// /* Ограничивающая оболочка */
+// .slick-list {}
+
+// /* Слайд */
+// .slick-slide{}
+// /* Слайд активный (показывается) */
+// .slick-slide.slick-active{}
+// /* Слайд основной */
+// .slick-slide.slick-current{}
+// /* Слайд по центру */
+// .slick-slide.slick-center{}
+// /* Клонированный слайд */
+// .slick-slide.slick-cloned{}
+// /* Стрелка */
+// .slick-arrow{
+    
+// }
+// /* Стрелка не активная */
+// .slick-arrow.slick-disabled{}
+// /* Точки (булиты) */
+// .slick-dots{}
+// .slick-dots li{}
+// /* Активная точка */
+// .slick-dots li.slick-active{}
+// /* Элемент точки */
+// .slick-dots li button{}
+// /* Лента слайдов */
+
+/* Стрелка влево */
+
+.slick-arrow.slick-prev {
+    overflow: hidden;
+    left: 40%;
+    border: none;
+    outline: none;
+    background: url("/assets/img/left.svg") 0 0 no-repeat;
+    width: 105px;
+    height: 40px;
+    &:hover {
+        color: $hoverColor;
+        transition: color 0.5s;
+        background: url("/assets/img/lefthover.svg") 0 0 no-repeat;
+    }
+}
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+    right: 40%;
+    border: none;
+    outline: none;
+    background: url("/assets/img/right.svg") 0 0 no-repeat;
+    width: 105px;
+    height: 40px;
+    &:hover {
+        background: url("/assets/img/righthover.svg") 0 0 no-repeat;
+    }
+} 
+
+.slider__item {
+    text-align: center;
+    border-radius: 6px;
+    img {
+        border-radius: 6px;
+    }
+    .slide_header {
+        font-size: 80px;
+        font-weight: 500;
+        overflow: auto;
+        color: $fontColor;
+        position: absolute;
+        margin-left: 50px;
+        margin-top: 406px;
+        text-align: left;
+    }
+    .slide_info {
+        font-size: 16px;
+        font-weight: 400;
+        overflow: auto;
+        color: $fontColor;
+        position: absolute;
+        margin-left: 50px;
+        margin-top: 512px;
+        max-width: 524px;
+        text-align: left;
+    }
+}
+
+.wrapper {
+    padding-top: 212px;
+}
+
+.slider {
+    .slick-track{
+        display: flex;
+        align-items: flex-start;
+    }
+    
+    .slick-list {
+        overflow: hidden;
+    }
+    position: relative;
+    .slick-arrow {
+        position: absolute;
+        top: 705px;
+        z-index: 10;
+        font-size: 0px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #slide1 {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    #slide2 {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    #slide3 {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 450px) {
+    .wrapper {
+        position: static;
+        margin-bottom: 140px;
+        padding-top: 150px;
+        .slider {
+            .slick-arrow {
+                position: absolute;
+                top: 490px;
+                z-index: 10;
+            }
+            .slick-next {
+                left: 175px;
+            }
+            .slick-prev {
+                left: 45px;
+            }
+            .slider__item{
+                .slide_header {
+                    font-size: 40px;
+                    font-weight: 500;
+                    margin-top: 206px;
+                    height: 60px;
+                    margin-left: 20px;
+                }
+                .slide_info {
+                    font-size: 16px;
+                    font-weight: 400;
+                    margin-top: 291px;
+                    max-width: 250px;
+                    margin-left: 20px;
+                    padding-left: 10px;
+                }
+                img {
+                    border-radius: 6px;
+                }
+            }
+        }
+    }
+}

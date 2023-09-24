@@ -1,0 +1,47 @@
+/* Default Styles */
+*,
+*::after,
+*::before {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Menu */ 
+@import "./components/menu.scss";
+/* Slider */
+@import "./components/slider.scss";
+/* FAQ */
+@import "./components/faq.scss";
+/* News */ 
+@import "./components/news.scss";
+/* Input */ 
+@import "./components/input.scss";
+/* Footer */ 
+@import "./components/footer.scss";
+
+
+$hoverColor: #75FF72;
+$backgrColor: #0B0A0D;
+$fontColor: white;
+
+ body {
+    font-family: 'M PLUS 1p', sans-serif;
+    background-color: $backgrColor;
+    font-style: normal;
+    overflow-x: hidden;
+}
+.container {
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+
+@media (max-width: 450px) {
+    .container:not(.news) {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

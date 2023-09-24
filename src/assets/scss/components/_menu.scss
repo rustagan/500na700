@@ -1,0 +1,243 @@
+$hoverColor: #75FF72;
+$backgrColor: #0B0A0D;
+$fontColor: white;
+
+header {
+    height: 212px;
+    position: fixed;  
+    top: 0;  
+    z-index: 100;  
+    width: 100%;
+    background-color: $backgrColor;
+}
+
+.menu_row {
+ display: flex;
+ align-items: center;
+ height: 100%;
+}
+
+.logo {
+    height: 50px;
+    width: 42px;
+    img {
+        max-height: 50px;
+        max-width: 42px;
+    }
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 212px;
+    width: 440px;
+    height: 64;
+}
+.menu_point{
+    padding: 0;
+}
+.menu_point_button {
+    background-color: $backgrColor;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: $fontColor;
+    height: 64px;
+    width: 64px;
+    padding: 0;
+    &:hover {
+        color: $hoverColor;
+        transition: color 0.5s;
+        border-bottom: 3px solid $fontColor;
+    }
+}
+
+.modal {
+    display: none;
+}
+.modal_active{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 426px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.556);
+    display: flex;
+    z-index: 1;
+    height: 3000px;
+}
+.open {
+    opacity: 1;
+}
+
+
+.sub_menu_container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 139px;
+    background-color: $backgrColor;
+    max-height: 288px;
+    padding-top: 72px;
+    padding-left: 362px;
+    padding-bottom: 57px;
+    .sub_menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-height: 159px;
+        li {
+            margin-bottom: 29px;
+            margin-right: 142px;
+            list-style-type:none;
+        }
+    }
+    display: none;
+    z-index: 1;
+}
+
+.menu_point:hover .menu_point_button {
+    border-bottom: 3px solid $fontColor;
+}
+
+.sub_menu_active {
+    display: flex;
+}
+
+.sub_menu_name {
+    font-size: 14px;
+    text-decoration: none;
+    color: $fontColor;
+    font-family: 'M PLUS 1p', sans-serif;
+    &:hover {
+        color: $hoverColor;
+        transition: color 0.5s;
+    }
+}
+
+
+.mob_menu {
+    display: none;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    justify-content: flex-end;
+    width: 36px;
+    height: 24px;
+    .lines {
+        height: 3px;
+        width: 100%;
+        background-color: $fontColor;
+    }
+}
+
+.mob_menu::before, .mob_menu::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: $fontColor;
+    transition: all 0.4s ease 0s;
+}
+.mob_menu::before {
+    top: 0;
+    width: 100%;
+}
+.mob_menu::after {
+    bottom: 0;
+    width: 50%;
+    right: 0;
+}
+
+.mob_menu.active .lines {
+    transform: scale(0);
+}
+
+.mob_menu.active::before {
+    top: 50%;
+    left: 4%;
+    transform: rotate(-45deg) translate(0,-50%);
+}
+
+.mob_menu.active::after {
+    bottom: 35%;
+    width: 100%;
+    transform: rotate(45deg) translate(0,-50%);
+}
+
+.open {
+    display: flex !important;
+}
+
+@media (max-width: 450px) {
+    header {
+        height: 150px;  
+    }
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        .menu_row {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    .mob_menu {
+        display: flex;
+    }
+
+    .menu {
+        position: absolute;
+        justify-self: normal;
+        display: none;
+        flex-direction: column;
+        row-gap: 40px;
+        width: 78%;
+        min-height: 644px;
+        background-color: $backgrColor;
+        z-index: 20;
+        margin-top: 500px;
+        margin-left: 22%;
+        justify-content: normal;
+        padding-top: 120px;
+        padding-left: 20%;
+        .menu_point_button {
+            padding: 0;
+            height: 24px;
+        }
+        .sub_menu_container {
+            position: static;
+            left: 0;
+            right: 0;
+            background-color: #0b0a0d;
+            max-height: 100%;
+            padding-top: 0px;
+            padding-left: 0px;
+            padding-bottom: 0px;
+            display: flex;
+            max-height: 0;
+            overflow: hidden;
+            transition: 0.3s ease-in-out;
+            
+            .sub_menu {
+                display: block;
+                max-height: 100%;
+                padding-left: 30px;
+                li {
+                    width: 100%;
+                    max-height: 21px;
+                }
+                .last {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    
+}
