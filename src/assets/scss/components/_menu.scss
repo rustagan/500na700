@@ -36,6 +36,7 @@ header {
 }
 .menu_point{
     padding: 0;
+    z-index: 60;
 }
 .menu_point_button {
     background-color: $backgrColor;
@@ -84,7 +85,7 @@ header {
     background-color: $backgrColor;
     max-height: 288px;
     padding-top: 72px;
-    padding-left: 362px;
+    padding-left: 340px;
     padding-bottom: 57px;
     .sub_menu {
         display: flex;
@@ -114,7 +115,6 @@ header {
     font-size: 14px;
     text-decoration: none;
     color: $fontColor;
-    font-family: 'M PLUS 1p', sans-serif;
     &:hover {
         color: $hoverColor;
         transition: color 0.5s;
@@ -193,7 +193,8 @@ header {
     }
 
     .menu {
-        position: absolute;
+        position: fixed;
+        top: 0;
         justify-self: normal;
         display: none;
         flex-direction: column;
@@ -202,14 +203,29 @@ header {
         min-height: 644px;
         background-color: $backgrColor;
         z-index: 20;
-        margin-top: 500px;
+        margin-top: 0;
         margin-left: 22%;
         justify-content: normal;
         padding-top: 120px;
         padding-left: 20%;
+        padding-bottom: 60px;
+        .modal_active {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0,0,0,.556);
+            height: 3000px;
+            z-index: 50;
+        }
         .menu_point_button {
             padding: 0;
             height: 24px;
+            &:hover {
+                border-bottom: 0;
+                color: $fontColor;
+            }
         }
         .sub_menu_container {
             position: static;

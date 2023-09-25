@@ -6,6 +6,23 @@
     box-sizing: border-box;
 }
 
+/* m-plus-1p-regular - cyrillic_latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'M PLUS 1p';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/m-plus-1p-v28-cyrillic_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* m-plus-1p-500 - cyrillic_latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'M PLUS 1p';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/m-plus-1p-v28-cyrillic_latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
 /* Menu */ 
 @import "./components/menu.scss";
 /* Slider */
@@ -28,6 +45,7 @@ $fontColor: white;
     font-family: 'M PLUS 1p', sans-serif;
     background-color: $backgrColor;
     font-style: normal;
+    font-weight: 500;
     overflow-x: hidden;
 }
 .container {

@@ -32,6 +32,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
         document.querySelector('.mob_menu').addEventListener('click', function() {
             this.classList.toggle('active');
             document.querySelector('.menu').classList.toggle('open');
+            const modal = document.querySelector('.modal');
+            modal.classList.toggle("modal_active");
         })
         document.querySelectorAll(".menu_point_button").forEach(e => {
             e.addEventListener("click", e => {
@@ -41,12 +43,15 @@ window.addEventListener("DOMContentLoaded", (event) => {
                     document.querySelectorAll(".sub_menu_container").forEach(e => {
                         e.style.maxHeight = null;
                         e.style.paddingTop = 0;
+                        document.querySelector('.menu').style.paddingTop = "120px";
                     })
                 } else {
                     document.querySelectorAll(".sub_menu_container").forEach(e => {
                         e.style.maxHeight = null;
                         e.style.paddingTop = 0;
+                        document.querySelector('.menu').style.paddingTop = "120px";
                     })
+                    document.querySelector('.menu').style.paddingTop = "100px";
                     subMenu.style.maxHeight = 255 + "px";
                     subMenu.style.paddingTop = 30 + "px";
                 }
