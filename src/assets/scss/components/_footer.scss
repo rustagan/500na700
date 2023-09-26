@@ -63,12 +63,13 @@ footer {
                 }
                 .footer_icons {
                     position: static;
-                    justify-content: start;
+                    justify-content: space-between;
                     margin-left: auto;
                     margin-right: auto;
                     max-width: 202px;
                     margin-top: 40px;
                     .footer_icon {
+                        margin-right: 0;
                         .vk-icon {
                         }
                         .facebook-icon {
