@@ -25,6 +25,10 @@ footer {
             }
         }
         .footer_icons {
+            position: absolute;
+            max-width: 1240px;
+            width: 100%;
+            justify-content: center;
             display: flex;
             align-items: center;
             .footer_icon {
